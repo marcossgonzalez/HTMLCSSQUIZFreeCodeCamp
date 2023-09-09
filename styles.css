@@ -1,3 +1,8 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+  }
 body {
     background: #f5f6f7;
     color: #1b1b32;
@@ -9,6 +14,10 @@ header{
     background-color: #1b1b32;
     display: flex;
     height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
 }
 
 #logo{
@@ -20,6 +29,7 @@ header{
 h1{
     color:#f1be32;
     font-size: min(5vw, 1.2em);
+    text-align: center;
 }
 nav > ul{
     display: flex;
@@ -30,6 +40,8 @@ h1,h2{
 }
 h2{
     border-bottom: 4px solid #dfdfe2;
+    padding-top: 60px;
+    margin-top: 0;
 }
 .sr-only{
 position: absolute;
@@ -44,4 +56,109 @@ border: 0;
 }
 p::before{
     content:"Question #";
+}
+nav > ul > li{ /*use > para direcionar para o elemento a ser modificado*/
+color: #dfdfe2;
+margin: 0 0.2rem;
+padding: 0.2rem;
+display: block;
+}
+li > a {
+    color: #dfdfe2
+}
+nav > ul > li:hover{
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+
+}
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main{
+    padding-top: 25px;
+}
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    flex-wrap: wrap;
+}
+section{
+    width: 80%;
+    margin: 0 auto 10px auto;
+    max-width: 600px;
+}
+.info{
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.formrow{
+    margin: 1px 0 0 0;
+    padding: 0 1px 0 1px;
+}
+input{
+    font-size: 13px;
+}
+.info input, .info label{
+    display: inline-block;
+}
+
+.info input{
+    width: 50%;
+    text-align: left;
+}
+.info label{
+    width: 10%;
+    min-width: 55px;
+    text-align: right;
+}
+.question-block{
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+p{
+    margin-top: 5px;
+padding-left: 15px;
+font-size: 20px;
+
+}
+.question{
+    border: 0;
+    padding-bottom: 0;
+}
+.answers-list{
+    list-style: none;
+    padding: 0;
+}
+button{
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+    font-size: 23px;
+    background: #d0d0d5;
+    border: 3px solid #3b3b4f;
+}
+footer{
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+}
+footer, footer a{
+    color:#dfdfe2
+}
+address{
+    text-align: center;
+    padding: 1px 1px 1px 1px;
 }
