@@ -13,23 +13,67 @@
     <h1>HTML/CSS Quiz</h1>
     <nav>
         <ul>
-            <li><a href="">INFO</a></li>
-            <li><a href="">HTML</a></li>
-            <li><a href="">CSS</a></li>
+            <li><a href="#student-info">INFO</a></li>
+            <li><a href="#html-questions">HTML</a></li>
+            <li><a href="#css-questions">CSS</a></li>
         </ul>
     </nav>
 </header>
 <main>
     <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+        <!--Student data of the quiz-->
         <section role="region" aria-labelledby="student-info">
-            <h2 id="student-info"></h2>
+            <h2 id="student-info">Student Info</h2>
+            <div class="info"><label for="name">Student's name:</label><input id="name" name="student-name" type="text"/></div>
+            <div class="info"><label for="email">Student's e-mail:</label><input id="email" name="student-email" type="email"/></div>
+            <div class="info"><label for="dateofbirth">Date of birth:<span class="sr-only">(Date of Birth)</span></label><input id="dateofbirth" name="student-dob" type="date"/></div>            
         </section>
+        <!--HTML Section of the quiz-->
         <section role="region" aria-labelledby="html-questions">
-            <h2 id="html-questions"></h2>
-        </section>
-        <section role="region" aria-labelledby="css-questions">
-            <h2 id ></h2>
-        </section>
+            <h2 id="html-questions">HTML</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset name="questions1" class="question">
+                        <legend>The legend element represents a caption for the content of its parent fieldset element </legend>
+                        <ul class="answers-list">
+                            <li><label for="q1-a1"><input name="questions1" id="q1-a1" type="radio" value="True">True</label></li>
+                            <li><label for="q1-a2"><input name="questions1" id="q1-a2" type="radio" value="False">False</label></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset name="questions2" class="question">
+                        <legend>A label element nesting an input element is required to have a for attribute with the same value as the input's id</legend>
+                        <ul class="answers-list">
+                            <li><label for="q2-a1"><input name="questions2" id="q2-a1" type="radio" value="True">True</label></li>
+                            <li><label for="q2-a2"><input name="questions2" id="q2-a2" type="radio" value="False">False</label></li>
+                        </ul>
+                    </fieldset>         
+                </div>
+          </section>
+          <!--CSS Section of the quiz-->
+          <section role="region" aria-labelledby="css-questions">
+            <h2 id="css-questions">CSS</h2>
+            <div class="formrow">
+                <div class="question-block">
+                    <label for="question3">Do you define a pseudo selector with '::'</label>
+                </div>
+                <div class="answer">
+                    <select name="pseudo-selector" id="question3" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question-block">
+                    <label for="questions">Do you have any questions:</label>
+                  </div>
+                  <div class="answer">
+                    <textarea id="questions" name="questionsblock" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
+                  </div>
+          </section>
+          <input type="submit" value="Send">
     </form>
 </main>
 </body>
